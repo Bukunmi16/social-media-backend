@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "a social media backend",
+  "homepage": "https://github.com/G-IHub/SOCIAL-MEDIA-BACKEND-BUKUNMI#readme",
+  "types": "module",
+  "bugs": {
+    "url": "https://github.com/G-IHub/SOCIAL-MEDIA-BACKEND-BUKUNMI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-IHub/SOCIAL-MEDIA-BACKEND-BUKUNMI.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1",
+    "nodemon": "^3.1.10"
+  }
+}
