@@ -28,6 +28,7 @@
  * /user/{id}:
  *   get:
  *     summary: Get a user by ID
+ *     tags: [User]
  *     parameters:
  *       - in: path
  *         name: id
@@ -39,6 +40,7 @@
  *         description: User found
  *   put:
  *     summary: Update a user by ID
+ *     tags: [User]
  *     parameters:
  *       - in: path
  *         name: id
@@ -56,6 +58,7 @@
  *         description: User updated
  *   delete:
  *     summary: Delete a user by ID
+ *     tags: [User]
  *     parameters:
  *       - in: path
  *         name: id
