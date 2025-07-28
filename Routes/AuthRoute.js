@@ -10,8 +10,10 @@
  *       properties:
  *         username:
  *           type: string
+ *           example: johndoe
  *         password:
  *           type: string
+ *           example: strongpassword123
  */
 
 /**
@@ -19,6 +21,7 @@
  * /auth/register:
  *   post:
  *     summary: Register a new user
+ *     tags: [Auth]
  *     requestBody:
  *       required: true
  *       content:
@@ -28,10 +31,13 @@
  *     responses:
  *       200:
  *         description: User registered successfully
+ *       400:
+ *         description: Invalid input or user already exists
  *
  * /auth/login:
  *   post:
  *     summary: Login a user
+ *     tags: [Auth]
  *     requestBody:
  *       required: true
  *       content:
@@ -41,6 +47,8 @@
  *     responses:
  *       200:
  *         description: User logged in successfully
+ *       401:
+ *         description: Unauthorized, invalid credentials
  */
 import express from 'express'
 import { registerUser, loginUser } from '../Controllers/AuthController.js'
