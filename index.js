@@ -5,6 +5,9 @@ import dotenv from 'dotenv'
 import AuthRoute from './Routes/AuthRoute.js'
 import UserRoute from './Routes/UserRoute.js'
 import PostRoute from './Routes/PostRoute.js'
+
+import swaggerJSDoc from 'swagger-jsdoc'
+import swaggerUI from "swagger-ui-express"
 // Routes
 
 const app = express()
@@ -24,3 +27,27 @@ mongoose
 app.use('/auth', AuthRoute)
 app.use('/user', UserRoute)
 app.use('/post', PostRoute)
+
+const options = {
+    definition:{
+        openapi: "3.0.0",
+         info: {
+            title: "Social Media API with Swagger",
+            version: "1.0.0",
+            description: "A simple Express API with Swagger documentation",
+    },
+        servers: [
+            {
+                url: "http://localhost:5000/"
+            },
+        ],
+    },
+    apis: ["./routes/*.js"],
+}
+
+const spacs = swaggerJSDoc(options)
+app.use(
+    "/api-docs",
+    swaggerUI.serve,
+    swaggerUI.setup(spacs)
+)
