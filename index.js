@@ -42,7 +42,7 @@ const options = {
             },
         ],
     },
-    apis: ["./routes/*.js"],
+    apis: ["./Routes/*.js"],
 }
 
 const spacs = swaggerJSDoc(options)
