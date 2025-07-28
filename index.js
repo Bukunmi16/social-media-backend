@@ -38,7 +38,7 @@ const options = {
     },
         servers: [
             {
-                url: "http://localhost:5000/"
+                url: "gihub-social-media-backend-production.up.railway.app"
             },
         ],
     },
