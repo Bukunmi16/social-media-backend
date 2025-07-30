@@ -11,6 +11,7 @@ import swaggerUI from "swagger-ui-express"
 // Routes
 
 const app = express()
+app.use(cors()) 
 
 // Genomacholdings_5280
 app.use(bodyParser.json({limit: '30mb', extended: true}))
