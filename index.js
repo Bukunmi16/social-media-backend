@@ -40,7 +40,7 @@ const options = {
     },
         servers: [
             {
-                url: "gihub-social-media-backend-production.up.railway.app"
+                url: "social-media-backend-production-001.up.railway.app"
             },
         ],
     },
