@@ -5,6 +5,7 @@ import dotenv from 'dotenv'
 import AuthRoute from './Routes/AuthRoute.js'
 import UserRoute from './Routes/UserRoute.js'
 import PostRoute from './Routes/PostRoute.js'
+import cors from 'cors'
 
 import swaggerJSDoc from 'swagger-jsdoc'
 import swaggerUI from "swagger-ui-express"
